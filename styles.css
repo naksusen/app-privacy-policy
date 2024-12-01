@@ -1,0 +1,31 @@
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1d3461;
+}
+
+p,
+li {
+  color: #000000;
+}
+
+.btn {
+  background-color: #ffcc29;
+  color: #1d3461;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  display: inline-block;
+}
