@@ -29,3 +29,36 @@ li {
   text-decoration: none;
   display: inline-block;
 }
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 10px;
+    margin: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .list-inside {
+    padding-left: 20px;
+  }
+
+  .mb-4,
+  .mb-6,
+  .mb-8 {
+    margin-bottom: 1rem;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+}
