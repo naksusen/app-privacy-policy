@@ -5,6 +5,11 @@ body {
   background-color: #1a2a57;
 }
 
+.dark body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -14,6 +19,30 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.dark .text-custom-header {
+  color: #ffffff;
+}
+
 .bg-white {
   background-color: white;
+}
+
+.dark .bg-white {
+  background-color: #1e1e1e;
+}
+
+.title-zoom {
+  animation: initialZoom 1s ease-out;
+  transform-origin: center;
+}
+
+@keyframes initialZoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
