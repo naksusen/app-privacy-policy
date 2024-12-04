@@ -3,101 +3,244 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baidyet - Privacy Policy</title>
+    <title>Privacy Policy</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container bg-white shadow-md p-8 mt-10 rounded-lg">
-      <header class="text-center mb-8">
-        <h1 class="text-3xl font-bold mb-4">Baidyet Privacy Policy</h1>
-        <p class="text-gray-600">Last Updated: December 2024</p>
-      </header>
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+      <div
+        class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
+      >
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 text-xl font-bold text-custom-header"
+        >
+          Baidyet
+        </div>
 
-      <section class="mb-6">
-        <h2 class="text-2xl font-semibold mb-4">Introduction</h2>
-        <p>
-          Welcome to Baidyet, an Artificial Intelligence Android Application
-          Budgeting Assistant designed to help you manage your personal finances
-          proactively. We are committed to protecting your privacy and ensuring
-          the security of your personal information.
-        </p>
-      </section>
+        <!-- hamburger menu -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-toggle"
+            class="text-custom-header focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
 
-      <section class="mb-6">
-        <h2 class="text-2xl font-semibold mb-4">
-          Information Collection and Use
-        </h2>
+        <div class="hidden md:flex space-x-4 ml-auto">
+          <a href="#" class="text-custom-header hover:text-blue-600">Home</a>
+          <a href="#" class="text-custom-header hover:text-blue-600">About</a>
+          <a href="#" class="text-custom-header hover:text-blue-600">Contact</a>
+        </div>
+      </div>
 
-        <div class="mb-4">
-          <h3 class="text-xl font-semibold mb-2">Personal Data</h3>
-          <p>
-            Baidyet does NOT collect, store, or use any personally identifiable
-            information such as your name, email address, or contact details.
-            All data you enter into the application remains securely on your
-            device.
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+      >
+        <div class="bg-white w-80 rounded-lg shadow-lg p-6 relative">
+          <button
+            id="mobile-menu-close"
+            class="absolute top-3 right-3 text-custom-header focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <div class="space-y-4 text-center">
+            <a
+              href="#"
+              class="block py-2 text-custom-header hover:text-blue-600"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-custom-header hover:text-blue-600"
+              >About</a
+            >
+            <a
+              href="#"
+              class="block py-2 text-custom-header hover:text-blue-600"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl mt-16 md:mt-20">
+      <div class="bg-white shadow-md p-4 md:p-8 rounded-lg">
+        <header class="text-center mb-6 md:mb-8">
+          <h1
+            class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-custom-header"
+          >
+            Privacy Policy
+          </h1>
+          <p class="text-gray-600 text-sm md:text-base">
+            Last Updated: December 2024
           </p>
-        </div>
+        </header>
 
-        <div class="mb-4">
-          <h3 class="text-xl font-semibold mb-2">
-            User-Entered Financial Data
-          </h3>
-          <ul class="list-disc list-inside ml-4">
-            <li>
-              All financial data you input is stored locally on your device
-            </li>
-            <li>
-              The application does not transmit your financial information to
-              external servers
-            </li>
-          </ul>
-        </div>
-
-        <div class="mb-4">
-          <h3 class="text-xl font-semibold mb-2">Device Data</h3>
-          <p>
-            We may collect non-personal, anonymized device information for app
-            performance improvement, including:
+        <section class="mb-6">
+          <h2
+            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header"
+          >
+            Introduction
+          </h2>
+          <p class="text-sm md:text-base">
+            Welcome to Baidyet, an Artificial Intelligence Android Application
+            Budgeting Assistant designed to help you manage your personal
+            finances proactively. We are committed to protecting your privacy
+            and ensuring the security of your personal information.
           </p>
-          <ul class="list-disc list-inside ml-4">
-            <li>Device model</li>
-            <li>Operating system version</li>
-            <li>Country code</li>
-            <li>Anonymous crash reports</li>
+        </section>
+
+        <section class="mb-6">
+          <h2
+            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header"
+          >
+            Information Collection and Use
+          </h2>
+
+          <div class="mb-4">
+            <h3
+              class="text-lg md:text-xl font-semibold mb-2 text-custom-header"
+            >
+              Personal Data
+            </h3>
+            <p class="text-sm md:text-base">
+              Baidyet does NOT collect, store, or use any personally
+              identifiable information such as your name, email address, or
+              contact details. All data you enter into the application remains
+              securely on your device.
+            </p>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-lg md:text-xl font-semibold mb-2 text-custom-header"
+            >
+              User-Entered Financial Data
+            </h3>
+            <ul class="list-disc list-inside ml-4 text-sm md:text-base">
+              <li>
+                All financial data you input is stored locally on your device
+              </li>
+              <li>
+                The application does not transmit your financial information to
+                external servers
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-4">
+            <h3
+              class="text-lg md:text-xl font-semibold mb-2 text-custom-header"
+            >
+              Device Data
+            </h3>
+            <p class="text-sm md:text-base">
+              We may collect non-personal, anonymized device information for app
+              performance improvement, including:
+            </p>
+            <ul class="list-disc list-inside ml-4 text-sm md:text-base">
+              <li>Device model</li>
+              <li>Operating system version</li>
+              <li>Country code</li>
+              <li>Anonymous crash reports</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mb-6">
+          <h2
+            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header"
+          >
+            Data Sources
+          </h2>
+          <p class="text-sm md:text-base">
+            The application retrieves publicly available data from:
+          </p>
+          <ul class="list-disc list-inside ml-4 text-sm md:text-base">
+            <li>Philippine Statistics Authority</li>
+            <li>Bangko Sentral ng Pilipinas</li>
+            <li>Department of Agriculture</li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="mb-6">
-        <h2 class="text-2xl font-semibold mb-4">Data Sources</h2>
-        <p>The application retrieves publicly available data from:</p>
-        <ul class="list-disc list-inside ml-4">
-          <li>Philippine Statistics Authority</li>
-          <li>Bangko Sentral ng Pilipinas</li>
-          <li>Department of Agriculture</li>
-        </ul>
-      </section>
+        <section class="mb-6">
+          <h2
+            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header"
+          >
+            User Consent
+          </h2>
+          <p class="text-sm md:text-base">
+            By using Baidyet, you agree to the terms of this privacy policy. If
+            you do not accept these terms, please do not install or use the
+            application.
+          </p>
+        </section>
 
-      <section class="mb-6">
-        <h2 class="text-2xl font-semibold mb-4">User Consent</h2>
-        <p>
-          By using Baidyet, you agree to the terms of this privacy policy. If
-          you do not accept these terms, please do not install or use the
-          application.
-        </p>
-      </section>
-
-      <footer class="text-center mt-8 pt-4 border-t">
-        <p class="text-gray-600">© 2024 Baidyet. All Rights Reserved.</p>
-        <p class="text-sm text-gray-500">
-          Developed by Computer Science Students, Cavite State University -
-          Bacoor City Campus
-        </p>
-      </footer>
+        <footer class="text-center mt-6 md:mt-8 pt-4 border-t">
+          <p class="text-gray-600 text-sm md:text-base">
+            © 2024 Baidyet. All Rights Reserved.
+          </p>
+          <p class="text-xs md:text-sm text-gray-500">
+            Developed by Computer Science Students, Cavite State University -
+            Bacoor City Campus
+          </p>
+        </footer>
+      </div>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenuClose = document.getElementById("mobile-menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+          mobileMenu.classList.add("flex");
+        });
+
+        mobileMenuClose.addEventListener("click", () => {
+          mobileMenu.classList.remove("flex");
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
