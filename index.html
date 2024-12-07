@@ -23,7 +23,7 @@
       <div
         class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
       >
-        <!-- theme toggle -->
+        <!-- theme toggle (for mobile) -->
         <div class="md:hidden">
           <button
             id="theme-toggle"
@@ -47,14 +47,8 @@
           </button>
         </div>
 
-        <div
-          class="absolute left-1/2 transform -translate-x-1/2 text-xl font-bold text-custom-header dark:text-white title-zoom"
-        >
-          Baidyet
-        </div>
-
         <!-- theme toggle (for desktop) -->
-        <div class="hidden md:block ml-auto flex items-center">
+        <div class="hidden md:block">
           <button
             id="theme-toggle-desktop"
             class="focus:outline-none text-custom-header dark:text-white"
@@ -77,8 +71,32 @@
           </button>
         </div>
 
+        <div
+          class="text-xl font-bold text-custom-header dark:text-white title-zoom"
+        >
+          Smart Budgeter
+        </div>
+
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#"
+            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+            >Contact</a
+          >
+        </div>
+
         <!-- hamburger menu -->
-        <div class="md:hidden ml-auto">
+        <div class="md:hidden">
           <button
             id="mobile-menu-toggle"
             class="text-custom-header dark:text-white focus:outline-none"
@@ -99,24 +117,6 @@
             </svg>
           </button>
         </div>
-
-        <div class="hidden md:flex space-x-4 ml-auto">
-          <a
-            href="#"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Home</a
-          >
-          <a
-            href="#"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >About</a
-          >
-          <a
-            href="#"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Contact</a
-          >
-        </div>
       </div>
 
       <div
@@ -124,11 +124,11 @@
         class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
       >
         <div
-          class="bg-white dark:bg-gray-800 w-80 rounded-lg shadow-lg p-6 relative"
+          class="bg-white dark:bg-gray-80 w-80 rounded-lg shadow-lg p-6 relative"
         >
           <button
             id="mobile-menu-close"
-            class="absolute top-3 right-3 text-custom-header dark:text-white focus:outline-none"
+            class="mobile-menu-close text-custom-header dark:text-white focus:outline-none"
           >
             <svg
               class="w-6 h-6"
@@ -167,7 +167,7 @@
     </nav>
 
     <div class="container mx-auto px-4 md:px-8 max-w-4xl mt-16 md:mt-20">
-      <div class="bg-white dark:bg-gray-800 shadow-md p-4 md:p-8 rounded-lg">
+      <div class="bg-white dark:bg-gray-80 shadow-md p-4 md:p-8 rounded-lg">
         <header class="text-center mb-6 md:mb-8">
           <h1
             class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-custom-header dark:text-white"
@@ -186,10 +186,10 @@
             Introduction
           </h2>
           <p class="text-sm md:text-base dark:text-gray-300">
-            Welcome to Baidyet, an Artificial Intelligence Android Application
-            Budgeting Assistant designed to help you manage your personal
-            finances proactively. We are committed to protecting your privacy
-            and ensuring the security of your personal information.
+            Welcome to Smart Budgeter, an Artificial Intelligence Android
+            Application Budgeting Assistant designed to help you manage your
+            personal finances proactively. We are committed to protecting your
+            privacy and ensuring the security of your personal information.
           </p>
         </section>
 
@@ -207,7 +207,7 @@
               Personal Data
             </h3>
             <p class="text-sm md:text-base dark:text-gray-300">
-              Baidyet does NOT collect, store, or use any personally
+              Smart Budgeter does NOT collect, store, or use any personally
               identifiable information such as your name, email address, or
               contact details. All data you enter into the application remains
               securely on your device.
@@ -279,9 +279,9 @@
             User Consent
           </h2>
           <p class="text-sm md:text-base dark:text-gray-300">
-            By using Baidyet, you agree to the terms of this privacy policy. If
-            you do not accept these terms, please do not install or use the
-            application.
+            By using Smart Budgeter, you agree to the terms of this privacy
+            policy. If you do not accept these terms, please do not install or
+            use the application.
           </p>
         </section>
 
@@ -289,7 +289,7 @@
           class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700"
         >
           <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
-            © 2024 Baidyet. All Rights Reserved.
+            © 2024 Smart Budgeter. All Rights Reserved.
           </p>
           <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">
             Developed by Computer Science Students, Cavite State University -

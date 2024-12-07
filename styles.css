@@ -31,6 +31,15 @@ body {
   background-color: #1e1e1e;
 }
 
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  text-indent: -1.5rem;
+  padding-left: 1.5rem;
+}
+
 .title-zoom {
   animation: initialZoom 1s ease-out;
   transform-origin: center;
@@ -45,4 +54,23 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.md:hidden {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.absolute {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 1.5rem;
+}
+
+#mobile-menu .mobile-menu-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
 }
