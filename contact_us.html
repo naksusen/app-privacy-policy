@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,156 +15,219 @@
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="custom-styles.css" />
     <link rel="stylesheet" href="styles/contact_us.css" />
+    <link rel="stylesheet" href="styles/common.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="scripts/theme-toggle.js" defer></script>
+    <script src="scripts/contact-form.js" defer></script>
+    <style>
+      body {
+        background-color: #F2E8DC;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .gradient-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #FFD166;
+        filter: blur(50px);
+      }
+      .circle-1 {
+        width: 70vw;
+        height: 70vw;
+        left: -16vw;
+        top: 10vh;
+      }
+      .circle-2 {
+        width: 70vw;
+        height: 70vw;
+        left: 40vw;
+        top: 94vh;
+      }
+      .circle-3 {
+        width: 70vw;
+        height: 70vw;
+        left: 130vw;
+        top: -10vh;
+      }
+      .circle-4 {
+        width: 35vw;
+        height: 35vw;
+        left: 100vw;
+        top: 55vh;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-    <nav
-      class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
-    >
-      <div
-        class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
-      >
-        <div class="text-xl font-bold text-custom-header dark:text-white">
-          Contact Us
-        </div>
-        <div class="hidden md:flex space-x-4">
-          <a
-            href="index.html"
-            class="text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Home</a
-          >
-          <a
-            href="about.html"
-            class="text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >About</a
-          >
-        </div>
-      </div>
-    </nav>
+  <body>
+    <div class="gradient-bg">
+      <div class="gradient-circle circle-1"></div>
+      <div class="gradient-circle circle-2"></div>
+      <div class="gradient-circle circle-3"></div>
+      <div class="gradient-circle circle-4"></div>
+    </div>
 
-    <div class="container mx-auto px-4 mt-16 md:mt-20 max-w-4xl">
-      <a
-        href="index.html"
-        class="inline-block mb-4 text-gray-800 hover:text-blue-600 dark:text-gray-200"
+    <div class="content-wrapper">
+      <nav
+        class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
       >
-        <i class="fa fa-chevron-left mr-2"></i>Back
-      </a>
-
-      <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 md:p-8">
-        <h2
-          class="typing-text text-2xl md:text-3xl font-bold mb-4 text-darkblue-600 dark:text-white"
+        <div
+          class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
         >
-          Get in Touch!
-        </h2>
-        <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-8">
-          Got a question or need assistance? Fill out the form below, and we'll
-          reach out to you as soon as we can.
-        </p>
-
-        <form id="contactForm" class="space-y-6">
-          <div>
-            <label
-              for="name"
-              class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
-              >Full Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            />
+          <div class="text-xl font-bold text-custom-header dark:text-white">
+            Contact Us
           </div>
-
-          <div>
-            <label
-              for="email"
-              class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
-              >Email Address</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            />
+          <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Privacy Policy</a>
+            <a href="terms_and_conditions.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Terms & Conditions</a>
+            <a href="about.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">About</a>
+            <a href="contact_us.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Contact Us</a>
           </div>
+        </div>
+      </nav>
 
-          <div>
-            <label
-              for="subject"
-              class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
-              >Subject</label
-            >
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            />
-          </div>
+      <div class="container mx-auto px-4 mt-16 md:mt-20 max-w-4xl">
+        <a
+          href="index.html"
+          class="inline-block mb-4 text-gray-800 hover:text-blue-600 dark:text-gray-200"
+        >
+          <i class="fa fa-chevron-left mr-2"></i>Back
+        </a>
 
-          <div>
-            <label
-              for="message"
-              class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              required
-              class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            class="w-full text-white py-3 px-4 rounded-md transition duration-300 transform hover:-translate-y-1 bg-darkblue-600 hover:bg-darkblue-700"
-            style="background-color: #1f2937"
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 md:p-8 backdrop-blur-sm bg-opacity-90">
+          <h2
+            class="typing-text text-2xl md:text-3xl font-bold mb-4 text-custom-header dark:text-white"
           >
-            Send Message
-          </button>
-        </form>
+            Get in Touch!
+          </h2>
+          <p class="text-sm md:text-base dark:text-gray-300 mb-8">
+            Got a question or need assistance? Fill out the form below, and we'll
+            reach out to you as soon as we can.
+          </p>
 
-        <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-4 text-gray-800 dark:text-white"
-          >
-            Other Ways to Reach Us
-          </h3>
-          <div class="space-y-4 text-gray-700 dark:text-gray-300">
+          <form id="contactForm" class="space-y-6">
             <div>
-              <p class="flex items-center">
-                <i class="fas fa-envelope mr-2"></i>
-                <span>Email:</span>
-              </p>
-              <p class="ml-8 break-words">support@smartbudgeter.com</p>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              />
             </div>
 
             <div>
-              <p class="flex items-center">
-                <i class="fas fa-phone mr-2"></i>
-                <span>Phone:</span>
-              </p>
-              <p class="ml-8">+63 091 234 5678</p>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              />
             </div>
 
             <div>
-              <p class="flex items-center">
-                <i class="fas fa-map-marker-alt mr-2"></i>
-                <span>Address:</span>
-              </p>
-              <p class="ml-8">Cavite State University - Bacoor Campus</p>
+              <label
+                for="subject"
+                class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              />
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-800 dark:text-white mb-2"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="input-focus w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full text-white py-3 px-4 rounded-md transition duration-300 transform hover:-translate-y-1 bg-darkblue-600 hover:bg-darkblue-700"
+              style="background-color: #1f2937"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-4 text-gray-800 dark:text-white"
+            >
+              Other Ways to Reach Us
+            </h3>
+            <div class="space-y-4 text-sm md:text-base dark:text-gray-300">
+              <div>
+                <p class="flex items-center">
+                  <i class="fas fa-envelope mr-2"></i>
+                  <span>Email:</span>
+                </p>
+                <p class="ml-8 break-words">support@smartbudgeter.com</p>
+              </div>
+
+              <div>
+                <p class="flex items-center">
+                  <i class="fas fa-phone mr-2"></i>
+                  <span>Phone:</span>
+                </p>
+                <p class="ml-8">+63 091 234 5678</p>
+              </div>
+
+              <div>
+                <p class="flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  <span>Address:</span>
+                </p>
+                <p class="ml-8">Cavite State University - Bacoor Campus</p>
+              </div>
             </div>
           </div>
+
+          <footer class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700">
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              © 2025 Smart Budgeter. All Rights Reserved.
+            </p>
+          </footer>
         </div>
       </div>
     </div>
@@ -195,28 +258,6 @@
       </div>
     </div>
 
-    <script>
-      const form = document.getElementById("contactForm");
-      const modal = document.getElementById("successModal");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        modal.style.display = "flex";
-        form.reset();
-      });
-
-      function closeModal() {
-        modal.style.display = "none";
-      }
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          closeModal();
-        }
-      };
-    </script>
-
     <script src="scripts/scroll.js"></script>
-    <script src="scripts/theme-toggle.js" defer></script>
   </body>
 </html>

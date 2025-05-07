@@ -40,6 +40,7 @@ ul li {
   padding-left: 1.5rem;
 }
 
+/* Privacy Policy page specific styles */
 .title-zoom {
   animation: initialZoom 1s ease-out;
   transform-origin: center;

@@ -14,303 +14,351 @@
     />
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="custom-styles.css" />
+    <link rel="stylesheet" href="styles/common.css" />
     <script src="scripts/theme-toggle.js" defer></script>
+    <script src="scripts/mobile-menu.js" defer></script>
     <style>
       .gold-text {
         color: #ffd166;
       }
+      body {
+        background-color: #F2E8DC;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .gradient-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #FFD166;
+        filter: blur(50px);
+      }
+      .circle-1 {
+        width: 70vw;
+        height: 70vw;
+        left: -16vw;
+        top: 10vh;
+      }
+      .circle-2 {
+        width: 70vw;
+        height: 70vw;
+        left: 40vw;
+        top: 94vh;
+      }
+      .circle-3 {
+        width: 70vw;
+        height: 70vw;
+        left: 130vw;
+        top: -10vh;
+      }
+      .circle-4 {
+        width: 35vw;
+        height: 35vw;
+        left: 100vw;
+        top: 55vh;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
     </style>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const mobileMenuClose = document.getElementById("mobile-menu-close");
-
-        mobileMenuToggle.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-        });
-
-        mobileMenuClose.addEventListener("click", function () {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-    </script>
   </head>
   <body>
-    <nav
-      class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
-    >
-      <div
-        class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
-      >
-        <!-- theme toggle (for mobile) -->
-        <div class="md:hidden">
-          <button
-            id="theme-toggle"
-            class="focus:outline-none text-custom-header dark:text-white"
-          >
-            <svg
-              id="theme-icon"
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
-              />
-            </svg>
-          </button>
-        </div>
+    <div class="gradient-bg">
+      <div class="gradient-circle circle-1"></div>
+      <div class="gradient-circle circle-2"></div>
+      <div class="gradient-circle circle-3"></div>
+      <div class="gradient-circle circle-4"></div>
+    </div>
 
-        <!-- theme toggle (for desktop) -->
-        <div class="hidden md:block">
-          <button
-            id="theme-toggle-desktop"
-            class="focus:outline-none text-custom-header dark:text-white"
-          >
-            <svg
-              id="theme-icon-desktop"
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+    <div class="content-wrapper">
+      <nav
+        class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
+      >
+        <div
+          class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
+        >
+          <!-- theme toggle (for mobile) -->
+          <div class="md:hidden">
+            <button
+              id="theme-toggle"
+              class="focus:outline-none text-custom-header dark:text-white"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
-              />
-            </svg>
-          </button>
+              <svg
+                id="theme-icon"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- theme toggle (for desktop) -->
+          <div class="hidden md:block">
+            <button
+              id="theme-toggle-desktop"
+              class="focus:outline-none text-custom-header dark:text-white"
+            >
+              <svg
+                id="theme-icon-desktop"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="text-xl font-bold text-custom-header dark:text-white title-zoom flex items-center justify-center"
+          >
+            <img src="assets/images/smartbud.png" alt="Smart Budgeter Logo" class="h-8 mr-2">
+            <span class="gold-text">Smart</span> Budgeter
+          </div>
+
+          <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Privacy Policy</a>
+            <a href="terms_and_conditions.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Terms & Conditions</a>
+            <a href="about.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">About</a>
+            <a href="contact_us.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Contact Us</a>
+          </div>
+
+          <!-- hamburger menu -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-toggle"
+              class="text-custom-header dark:text-white focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div
-          class="text-xl font-bold text-custom-header dark:text-white title-zoom"
+          id="mobile-menu"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
         >
-          <span class="gold-text">Smart</span> Budgeter
-        </div>
-
-        <div class="hidden md:flex space-x-4">
-          <a
-            href="#"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Home</a
+          <div
+            class="bg-white dark:bg-gray-80 w-64 h-full transform -translate-x-full transition-transform duration-300 ease-in-out"
           >
-          <a
-            href="about.html"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >About</a
-          >
-          <a
-            href="contact_us.html"
-            class="text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Contact Us</a
-          >
-        </div>
-
-        <!-- hamburger menu -->
-        <div class="md:hidden">
-          <button
-            id="mobile-menu-toggle"
-            class="text-custom-header dark:text-white focus:outline-none"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div
-        id="mobile-menu"
-        class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50"
-      >
-        <div
-          class="bg-white dark:bg-gray-80 w-80 rounded-lg shadow-lg p-6 relative"
-        >
-          <button
-            id="mobile-menu-close"
-            class="mobile-menu-close text-custom-header dark:text-white focus:outline-none"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-          <div class="space-y-4 text-center">
-            <a
-              href="about.html"
-              class="block py-2 text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-              >About</a
-            >
-            <a
-              href="contact_us.html"
-              class="block py-2 text-custom-header hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-              >Contact Us</a
-            >
+            <div class="p-4">
+              <button
+                id="mobile-menu-close"
+                class="mobile-menu-close text-custom-header dark:text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+              <div class="flex items-center justify-center mb-8 mt-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+                <img src="assets/images/smartbud.png" alt="Smart Budgeter Logo" class="h-8 mr-2">
+                <div class="text-xl font-bold text-custom-header dark:text-white">
+                  <span class="gold-text">Smart</span> Budgeter
+                </div>
+              </div>
+              <div class="space-y-4">
+                <a
+                  href="about.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >About</a
+                >
+                <a
+                  href="contact_us.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >Contact Us</a
+                >
+                <a
+                  href="terms_and_conditions.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >Terms & Conditions</a
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <div class="container mx-auto px-4 md:px-8 max-w-4xl mt-16 md:mt-20">
-      <div class="bg-white dark:bg-gray-80 shadow-md p-4 md:p-8 rounded-lg">
-        <header class="text-center mb-6 md:mb-8">
-          <h1
-            class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-custom-header dark:text-white"
-          >
-            Privacy Policy
-          </h1>
-          <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
-            Last Updated: February 2025
-          </p>
-        </header>
-
-        <section class="mb-6">
-          <h2
-            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
-          >
-            Introduction
-          </h2>
-          <p class="text-sm md:text-base dark:text-gray-300">
-            Welcome to Smart Budgeter, an Artificial Intelligence Android
-            Application Budgeting Assistant designed to help you manage your
-            personal finances proactively. We are committed to protecting your
-            privacy and ensuring the security of your personal information.
-          </p>
-        </section>
-
-        <section class="mb-6">
-          <h2
-            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
-          >
-            Information Collection and Use
-          </h2>
-
-          <div class="mb-4">
-            <h3
-              class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+      <div class="container mx-auto px-4 md:px-8 max-w-4xl mt-16 md:mt-20">
+        <div class="bg-white dark:bg-gray-80 shadow-md p-4 md:p-8 rounded-lg backdrop-blur-sm bg-opacity-90">
+          <header class="text-center mb-6 md:mb-8">
+            <h1
+              class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-custom-header dark:text-white"
             >
-              Personal Data
-            </h3>
-            <p class="text-sm md:text-base dark:text-gray-300">
-              Smart Budgeter does NOT collect, store, or use any personally
-              identifiable information such as your name, email address, or
-              contact details. All data you enter into the application remains
-              securely on your device.
+              Privacy Policy
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              Last Updated: May 2025
             </p>
-          </div>
+          </header>
 
-          <div class="mb-4">
-            <h3
-              class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+          <section class="mb-6">
+            <h2
+              class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
             >
-              User-Entered Financial Data
-            </h3>
-            <ul
-              class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
-            >
-              <li>
-                All financial data you input is stored locally on your device
-              </li>
-              <li>
-                The application does not transmit your financial information to
-                external servers
-              </li>
-            </ul>
-          </div>
-
-          <div class="mb-4">
-            <h3
-              class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
-            >
-              Device Data
-            </h3>
+              Introduction
+            </h2>
             <p class="text-sm md:text-base dark:text-gray-300">
-              We may collect non-personal, anonymized device information for app
-              performance improvement, including:
+              Welcome to Smart Budgeter, an Artificial Intelligence Android
+              Application Budgeting Assistant designed to help you manage your
+              personal finances proactively. We are committed to protecting your
+              privacy and ensuring the security of your personal information.
+            </p>
+          </section>
+
+          <section class="mb-6">
+            <h2
+              class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+            >
+              Information Collection and Use
+            </h2>
+
+            <div class="mb-4">
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                Personal Data
+              </h3>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                Smart Budgeter does NOT collect, store, or use any personally
+                identifiable information such as your name, email address, or
+                contact details. All data you enter into the application remains
+                securely on your device.
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                User-Entered Financial Data
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>
+                  All financial data you input is stored locally on your device
+                </li>
+                <li>
+                  The application does not transmit your financial information to
+                  external servers
+                </li>
+              </ul>
+            </div>
+
+            <div class="mb-4">
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                Device Data
+              </h3>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                We may collect non-personal, anonymized device information for app
+                performance improvement, including:
+              </p>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>Device model</li>
+                <li>Operating system version</li>
+                <li>Country code</li>
+                <li>Anonymous crash reports</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="mb-6">
+            <h2
+              class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+            >
+              Data Sources
+            </h2>
+            <p class="text-sm md:text-base dark:text-gray-300">
+              The application retrieves publicly available data from:
             </p>
             <ul
               class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
             >
-              <li>Device model</li>
-              <li>Operating system version</li>
-              <li>Country code</li>
-              <li>Anonymous crash reports</li>
+              <li>Philippine Statistics Authority</li>
+              <li>Bangko Sentral ng Pilipinas</li>
+              <li>Department of Agriculture</li>
             </ul>
-          </div>
-        </section>
+          </section>
 
-        <section class="mb-6">
-          <h2
-            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
-          >
-            Data Sources
-          </h2>
-          <p class="text-sm md:text-base dark:text-gray-300">
-            The application retrieves publicly available data from:
-          </p>
-          <ul
-            class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
-          >
-            <li>Philippine Statistics Authority</li>
-            <li>Bangko Sentral ng Pilipinas</li>
-            <li>Department of Agriculture</li>
-          </ul>
-        </section>
+          <section class="mb-6">
+            <h2
+              class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+            >
+              User Consent
+            </h2>
+            <p class="text-sm md:text-base dark:text-gray-300">
+              By using Smart Budgeter, you agree to the terms of this privacy
+              policy. If you do not accept these terms, please do not install or
+              use the application.
+            </p>
+          </section>
 
-        <section class="mb-6">
-          <h2
-            class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+          <footer
+            class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700"
           >
-            User Consent
-          </h2>
-          <p class="text-sm md:text-base dark:text-gray-300">
-            By using Smart Budgeter, you agree to the terms of this privacy
-            policy. If you do not accept these terms, please do not install or
-            use the application.
-          </p>
-        </section>
-
-        <footer
-          class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700"
-        >
-          <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
-            © 2025 Smart Budgeter. All Rights Reserved.
-          </p>
-          <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">
-            Developed by Computer Science Students, Cavite State University -
-            Bacoor City Campus
-          </p>
-        </footer>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              © 2025 Smart Budgeter. All Rights Reserved.
+            </p>
+            <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">
+              Developed by Computer Science Students, Cavite State University -
+              Bacoor City Campus
+            </p>
+          </footer>
+        </div>
       </div>
     </div>
   </body>

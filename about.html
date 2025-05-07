@@ -14,145 +14,201 @@
     />
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="custom-styles.css" />
+    <link rel="stylesheet" href="styles/common.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="scripts/theme-toggle.js" defer></script>
     <style>
       .gold-text {
         color: #ffd166;
       }
+      body {
+        background-color: #F2E8DC;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .gradient-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #FFD166;
+        filter: blur(50px);
+      }
+      .circle-1 {
+        width: 70vw;
+        height: 70vw;
+        left: -16vw;
+        top: 10vh;
+      }
+      .circle-2 {
+        width: 70vw;
+        height: 70vw;
+        left: 40vw;
+        top: 94vh;
+      }
+      .circle-3 {
+        width: 70vw;
+        height: 70vw;
+        left: 130vw;
+        top: -10vh;
+      }
+      .circle-4 {
+        width: 35vw;
+        height: 35vw;
+        left: 100vw;
+        top: 55vh;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
     </style>
   </head>
-  <body
-    class="bg-gray-100 dark:bg-black-900 text-black-800 dark:text--200black"
-  >
-    <nav
-      class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
-    >
-      <div
-        class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
+  <body>
+    <div class="gradient-bg">
+      <div class="gradient-circle circle-1"></div>
+      <div class="gradient-circle circle-2"></div>
+      <div class="gradient-circle circle-3"></div>
+      <div class="gradient-circle circle-4"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <nav
+        class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
       >
-        <div class="text-xl font-bold text-custom-header dark:text-white">
-          About
-        </div>
-
-        <div class="hidden md:flex space-x-4">
-          <a
-            href="index.html"
-            class="text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Home</a
-          >
-          <a
-            href="contact_us.html"
-            class="text-gray-800 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
-            >Contact Us</a
-          >
-        </div>
-      </div>
-    </nav>
-
-    <div class="container mx-auto px-4 mt-16 md:mt-20 max-w-4xl">
-      <a
-        href="index.html"
-        class="inline-block mb-4 text-gray-800 hover:text-blue-600 dark:text-gray-200"
-      >
-        <i class="fa fa-chevron-left mr-2"></i>Back
-      </a>
-
-      <div class="bg-white dark:bg-black-800 shadow-md rounded-lg p-6 md:p-8">
-        <h2
-          class="text-2xl md:text-3xl font-bold mb-4 text-custom-header dark:text-white"
+        <div
+          class="container mx-auto px-4 md:px-8 max-w-4xl flex justify-between items-center py-3"
         >
-          <span class="gold-text">Smart</span> Budgeter
-        </h2>
+          <div class="text-xl font-bold text-custom-header dark:text-white">
+            About
+          </div>
 
-        <section class="mb-4">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
-          >
-            Our Story
-          </h3>
-          <p class="text-black-700 dark:text-black-300 text-base md:text-lg">
-            Developed by Computer Science Students at Cavite State University -
-            Bacoor Campus in 2025, Smart Budgeter is an innovative Android
-            application designed to transform personal financial management
-            through artificial intelligence.
-          </p>
-        </section>
+          <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Privacy Policy</a>
+            <a href="terms_and_conditions.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Terms & Conditions</a>
+            <a href="about.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">About</a>
+            <a href="contact_us.html" class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">Contact Us</a>
+          </div>
+        </div>
+      </nav>
 
-        <section class="mb-4">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
-          >
-            Our Mission
-          </h3>
-          <p class="text-black-700 dark:text-black-300 text-base md:text-lg">
-            To empower individuals with proactive, intelligent budgeting tools
-            that adapt to changing economic conditions, enhance financial
-            literacy, and support informed financial decision-making.
-          </p>
-        </section>
+      <div class="container mx-auto px-4 mt-16 md:mt-20 max-w-4xl">
+        <a
+          href="index.html"
+          class="inline-block mb-4 text-gray-800 hover:text-blue-600 dark:text-gray-200"
+        >
+          <i class="fa fa-chevron-left mr-2"></i>Back
+        </a>
 
-        <section class="mb-4">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
+        <div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 md:p-8 backdrop-blur-sm bg-opacity-90">
+          <h2
+            class="text-2xl md:text-3xl font-bold mb-4 text-custom-header dark:text-white"
           >
-            Key Features
-          </h3>
-          <ul
-            class="list-disc list-inside pl-4 text-black-700 dark:text-black-300 text-base md:text-lg"
-          >
-            <li>Automatic Transaction Categorization</li>
-            <li>Personalized Budget Recommendations</li>
-            <li>Inflation Forecasting</li>
-            <li>Price Tracking for Essential Goods</li>
-            <li>Financial Education Resources</li>
-          </ul>
-        </section>
+            <span class="gold-text">Smart</span> Budgeter
+          </h2>
 
-        <section class="mb-4">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
-          >
-            Technology
-          </h3>
-          <ul
-            class="list-disc list-inside pl-4 text-black-700 dark:text-black-300 text-base md:text-lg"
-          >
-            <li>Platform: Android</li>
-            <li>Development: Flutter and Dart</li>
-            <li>Backend: Supabase</li>
-            <li>AI Capabilities: Machine Learning Algorithms</li>
-          </ul>
-        </section>
-
-        <section class="mb-4">
-          <h3
-            class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
-          >
-            Our Commitment
-          </h3>
-          <p class="text-black-700 dark:text-black-300 text-base md:text-lg">
-            Helping you navigate financial challenges with intelligent,
-            personalized guidance.
-          </p>
-        </section>
-
-        <footer class="text-center mt-6">
-          <p class="text-black-700 dark:text-black-300 text-base md:text-lg">
-            Let
-            <span class="smart-budgeter"
-              ><span class="gold-text">Smart</span> Budgeter</span
+          <section class="mb-4">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
             >
-            take control of your financial future!
-          </p>
-        </footer>
+              Our Story
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg">
+              Developed by Computer Science Students at Cavite State University -
+              Bacoor Campus in 2025, Smart Budgeter is an innovative Android
+              application designed to transform personal financial management
+              through artificial intelligence.
+            </p>
+          </section>
+
+          <section class="mb-4">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
+            >
+              Our Mission
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg">
+              To empower individuals with proactive, intelligent budgeting tools
+              that adapt to changing economic conditions, enhance financial
+              literacy, and support informed financial decision-making.
+            </p>
+          </section>
+
+          <section class="mb-4">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
+            >
+              Key Features
+            </h3>
+            <ul
+              class="list-disc list-inside pl-4 text-gray-700 dark:text-gray-300 text-base md:text-lg"
+            >
+              <li>Automatic Transaction Categorization</li>
+              <li>Personalized Budget Recommendations</li>
+              <li>Inflation Forecasting</li>
+              <li>Price Tracking for Essential Goods</li>
+              <li>Financial Education Resources</li>
+            </ul>
+          </section>
+
+          <section class="mb-4">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
+            >
+              Technology
+            </h3>
+            <ul
+              class="list-disc list-inside pl-4 text-gray-700 dark:text-gray-300 text-base md:text-lg"
+            >
+              <li>Platform: Android</li>
+              <li>Development: Flutter and Dart</li>
+              <li>Backend: Supabase</li>
+              <li>AI Capabilities: Machine Learning Algorithms</li>
+            </ul>
+          </section>
+
+          <section class="mb-4">
+            <h3
+              class="text-xl md:text-2xl font-semibold mb-2 text-custom-header dark:text-white"
+            >
+              Our Commitment
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 text-base md:text-lg">
+              Helping you navigate financial challenges with intelligent,
+              personalized guidance.
+            </p>
+          </section>
+
+          <footer class="text-center mt-6">
+            <p class="text-sm md:text-base dark:text-gray-300">
+              Let
+              <span class="smart-budgeter"
+                ><span class="gold-text">Smart</span> Budgeter</span
+              >
+              take control of your financial future!
+            </p>
+          </footer>
+
+          <footer class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700">
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              © 2025 Smart Budgeter. All Rights Reserved.
+            </p>
+          </footer>
+        </div>
       </div>
     </div>
 
     <script src="scripts/scroll.js"></script>
-
-    <script src="scripts/theme-toggle.js" defer></script>
   </body>
 </html>

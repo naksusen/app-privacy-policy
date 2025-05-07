@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions - Smart Budgeter</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="custom-styles.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <script src="scripts/theme-toggle.js" defer></script>
+    <script src="scripts/mobile-menu.js" defer></script>
+    <style>
+      .gold-text {
+        color: #ffd166;
+      }
+      body {
+        background-color: #f2e8dc;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .gradient-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      .gradient-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #ffd166;
+        filter: blur(50px);
+      }
+      .circle-1 {
+        width: 70vw;
+        height: 70vw;
+        left: -16vw;
+        top: 10vh;
+      }
+      .circle-2 {
+        width: 70vw;
+        height: 70vw;
+        left: 40vw;
+        top: 94vh;
+      }
+      .circle-3 {
+        width: 70vw;
+        height: 70vw;
+        left: 130vw;
+        top: -10vh;
+      }
+      .circle-4 {
+        width: 35vw;
+        height: 35vw;
+        left: 100vw;
+        top: 55vh;
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-bg">
+      <div class="gradient-circle circle-1"></div>
+      <div class="gradient-circle circle-2"></div>
+      <div class="gradient-circle circle-3"></div>
+      <div class="gradient-circle circle-4"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <nav
+        class="fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-md z-50"
+      >
+        <div
+          class="container mx-auto px-4 md:px-8 max-w-4xl flex items-center py-3"
+        >
+          <!-- theme toggle (for mobile) -->
+          <div class="md:hidden">
+            <button
+              id="theme-toggle"
+              class="focus:outline-none text-custom-header dark:text-white"
+            >
+              <svg
+                id="theme-icon"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- theme toggle (for desktop) -->
+          <div class="hidden md:block">
+            <button
+              id="theme-toggle-desktop"
+              class="focus:outline-none text-custom-header dark:text-white"
+            >
+              <svg
+                id="theme-icon-desktop"
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m12.728 12.728L18.364 18.364M12 7a5 5 0 110 10 5 5 0 010-10z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- centered title -->
+          <div
+            class="text-xl font-bold text-custom-header dark:text-white title-zoom flex-1 text-center flex items-center justify-center"
+          >
+            <img
+              src="assets/images/smartbud.png"
+              alt="Smart Budgeter Logo"
+              class="h-8 mr-2"
+            />
+            <span class="gold-text">Smart</span> Budgeter
+          </div>
+
+          <!-- desktop navigation -->
+          <div class="hidden md:flex space-x-4">
+            <a
+              href="index.html"
+              class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+              >Privacy Policy</a
+            >
+            <a
+              href="terms_and_conditions.html"
+              class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+              >Terms & Conditions</a
+            >
+            <a
+              href="about.html"
+              class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="contact_us.html"
+              class="text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+              >Contact Us</a
+            >
+          </div>
+
+          <!-- empty div to balance the layout -->
+          <div class="md:hidden w-6"></div>
+
+          <!-- hamburger menu -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-toggle"
+              class="text-custom-header dark:text-white focus:outline-none"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- mobile menu overlay -->
+        <div
+          id="mobile-menu"
+          class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+        >
+          <div
+            class="bg-white dark:bg-gray-80 w-64 h-full transform -translate-x-full transition-transform duration-300 ease-in-out"
+          >
+            <div class="p-4">
+              <button
+                id="mobile-menu-close"
+                class="mobile-menu-close text-custom-header dark:text-white focus:outline-none"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                class="flex items-center justify-center mb-8 mt-4 pb-4 border-b border-gray-200 dark:border-gray-700"
+              >
+                <img
+                  src="assets/images/smartbud.png"
+                  alt="Smart Budgeter Logo"
+                  class="h-8 mr-2"
+                />
+                <div
+                  class="text-xl font-bold text-custom-header dark:text-white"
+                >
+                  <span class="gold-text">Smart</span> Budgeter
+                </div>
+              </div>
+              <div class="space-y-4">
+                <a
+                  href="about.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >About</a
+                >
+                <a
+                  href="contact_us.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >Contact Us</a
+                >
+                <a
+                  href="index.html"
+                  class="block py-2 px-4 text-custom-header hover:text-[#1A2A57] dark:text-white dark:hover:text-[#1A2A57] transition-colors duration-200 font-bold hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                  >Privacy Policy</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mx-auto px-4 md:px-8 max-w-4xl mt-16 md:mt-20">
+        <div
+          class="bg-white dark:bg-gray-80 shadow-md p-4 md:p-8 rounded-lg backdrop-blur-sm bg-opacity-90"
+        >
+          <header class="text-center mb-6 md:mb-8">
+            <h1
+              class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-custom-header dark:text-white"
+            >
+              Terms and Conditions
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              Last Updated: May 2025
+            </p>
+          </header>
+
+          <div class="space-y-6">
+            <section class="mb-6">
+              <p class="text-sm md:text-base dark:text-gray-300">
+                By viewing and using the
+                <span
+                  class="text-xl md:text-2xl font-bold text-custom-header dark:text-white"
+                  ><span class="gold-text">Smart</span> Budgeter</span
+                >
+                application, you agree to the following conditions of use.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Legal Disclaimer
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                Use the Smart Budgeter application and its tools as a guide and
+                starting point only, then seek professional financial advice.
+              </p>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                The Smart Budgeter AI Budgeting Assistant is designed to help
+                you make more informed decisions about managing your finances
+                and planning for your future. However, the information and tools
+                provided are not intended to be your sole source of financial
+                guidance.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                No Warranty or Liability
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                We make every effort to ensure that the Smart Budgeter
+                application's information is accurate and its AI algorithms are
+                reliable. However, the development team and affiliated
+                organizations make no express or implied representations or
+                warranties regarding the application, and we accept no liability
+                for:
+              </p>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>
+                  Any loss or damage arising from the use of the application
+                </li>
+                <li>
+                  Errors or omissions in the application's features or
+                  recommendations
+                </li>
+                <li>
+                  Inaccuracies in financial predictions, inflation forecasts, or
+                  price tracking information
+                </li>
+                <li>
+                  Any financial decisions made based on the application's
+                  suggestions
+                </li>
+              </ul>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                We cannot guarantee that the Smart Budgeter application will
+                always be accessible, error-free, or completely accurate.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Recommendation Limitations
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                The Smart Budgeter tools provide estimated and personalized
+                financial guidance only. The recommendations are based on:
+              </p>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>User-provided financial data</li>
+                <li>AI algorithms</li>
+                <li>External inflation and price tracking data</li>
+              </ul>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                These recommendations are not exact and may not always hold true
+                or be perfectly relevant to your specific financial situation.
+                Users should always consult with professional financial advisors
+                for comprehensive financial planning.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                User Account and Data
+              </h2>
+
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                Account Management:
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>
+                  Users can create a personal account to save and track
+                  financial information
+                </li>
+                <li>
+                  Accounts inactive for an extended period may be subject to
+                  deletion
+                </li>
+                <li>
+                  Users are responsible for maintaining the confidentiality of
+                  their account credentials
+                </li>
+              </ul>
+
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                Data Privacy:
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>
+                  Personal financial information is stored securely and in
+                  compliance with data protection regulations
+                </li>
+                <li>
+                  No personal identifiable information will be shared with third
+                  parties without explicit user consent
+                </li>
+                <li>
+                  Aggregate, anonymized data may be used for system improvement
+                  and research purposes
+                </li>
+              </ul>
+
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                User Responsibilities:
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>Provide accurate and up-to-date financial information</li>
+                <li>Regularly update and review financial data</li>
+                <li>
+                  Understand that the application's recommendations are
+                  suggestions, not absolute financial advice
+                </li>
+                <li>Maintain the security of account login credentials</li>
+              </ul>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Intellectual Property
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                The Smart Budgeter application, including its design, AI
+                algorithms, and content, is the intellectual property of the
+                development team. Reproduction, distribution, or use of the
+                application's components is prohibited without explicit written
+                permission.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                External Data Sources
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                The application relies on external data sources for inflation
+                forecasts and price tracking, including:
+              </p>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>Philippine Statistics Authority</li>
+                <li>Bangko Sentral ng Pilipinas</li>
+                <li>Department of Agriculture</li>
+              </ul>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                We are not responsible for any inaccuracies or delays in data
+                from these sources.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Changes to Terms and Conditions
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                We reserve the right to modify these terms and conditions at any
+                time. Updated terms will be published within the application,
+                and continued use of the application constitutes acceptance of
+                the revised terms.
+              </p>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Limitation of Use
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                The Smart Budgeter application is intended for personal
+                financial management and educational purposes. It is not
+                designed for:
+              </p>
+              <ul
+                class="list-disc list-inside ml-4 text-sm md:text-base dark:text-gray-300"
+              >
+                <li>Professional financial consulting</li>
+                <li>Large-scale business financial planning</li>
+                <li>Real-time stock market or investment advice</li>
+              </ul>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Contact Information
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                For questions, concerns, or support related to the Smart
+                Budgeter application, please contact:
+              </p>
+
+              <h3
+                class="text-lg md:text-xl font-semibold mb-2 text-custom-header dark:text-white"
+              >
+                Developers:
+              </h3>
+              <div class="space-y-2 text-sm md:text-base dark:text-gray-300">
+                <p>
+                  <span class="font-semibold">Jacqueline T. Avendaño:</span
+                  ><br />bc.jacqueline.avendano@cvsu.edu.ph
+                </p>
+                <p>
+                  <span class="font-semibold">Janet M. Bulao:</span
+                  ><br />bc.janet.bulao@cvsu.edu.ph
+                </p>
+                <p>
+                  <span class="font-semibold">Charl C. Cortez:</span
+                  ><br />bc.charl.cortez@cvsu.edu.ph
+                </p>
+                <p>
+                  <span class="font-semibold">Micaela A. Lingan:</span
+                  ><br />bc.micaela.lingan@cvsu.edu.ph
+                </p>
+              </div>
+            </section>
+
+            <section class="mb-6">
+              <h2
+                class="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-custom-header dark:text-white"
+              >
+                Acceptance of Terms
+              </h2>
+              <p class="text-sm md:text-base dark:text-gray-300">
+                By downloading, installing, and using the Smart Budgeter AI
+                Budgeting Assistant, you acknowledge that you have read,
+                understood, and agree to these terms and conditions.
+              </p>
+            </section>
+          </div>
+
+          <footer
+            class="text-center mt-6 md:mt-8 pt-4 border-t dark:border-gray-700"
+          >
+            <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              © 2025 Smart Budgeter. All Rights Reserved.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
